@@ -6,6 +6,8 @@ import EzraSignUp from "../../images/EzraSignUp.png";
 import ERP from "../../images/Patient-Reg.jpg";
 import laptops from "../../images/enclair_products.JPG";
 import nextjs from "../../images/next-js-portfolio.png";
+import Anime from "../../images/Anime.png";
+import Dfw from "../../images/DFW.png";
 import edge21 from "../../images/Edgelogin.JPG";
 import ProjectCard from './ProjectCard';
 
@@ -60,16 +62,25 @@ const ProjectDetailsComp = () => {
           <ProjectCard
             href="https://afomedia.com/"
             imageSrc={AFO}
-            altText="Project 1"
+            altText="AFO MEDIA Web App"
             title="AFO MEDIA"
             description="A premium Full-Stack Web App responsive design offering a seamless user experience for watching videos and podcasts."
             onMouseEnter={() => handleMouseEnter('View')}
             onMouseLeave={handleMouseLeave}
           />
           <ProjectCard
+            href="https://book.dfwluxauto.com/"
+            imageSrc={Dfw}
+            altText="Project 2"
+            title="DFW Lux Auto"
+            description="A luxury car rental platform offering a seamless booking experience with reliable service, secure rentals, and personalized support for an elevated driving experience."
+            onMouseEnter={() => handleMouseEnter('View')}
+            onMouseLeave={handleMouseLeave}
+          />
+          <ProjectCard
             href="https://ezra-home.kbadosh.com/"
             imageSrc={EzraSignUp}
-            altText="Project 2"
+            altText="Project 3"
             title="Ezra Management System"
             description="A premium Web App responsive design offering a seamless user experience for buyer and seller of property."
             onMouseEnter={() => handleMouseEnter('View')}
@@ -78,18 +89,9 @@ const ProjectDetailsComp = () => {
           <ProjectCard
             href="https://enclair.tech/"
             imageSrc={laptops}
-            altText="Project 3"
+            altText="Project 4"
             title="Laptop Web App"
-            description="A web development project emphasizing modern JavaScript frameworks using NEXT JS."
-            onMouseEnter={() => handleMouseEnter('View')}
-            onMouseLeave={handleMouseLeave}
-          />
-          <ProjectCard
-            href="https://next-js-portfolio-henna.vercel.app/"
-            imageSrc={nextjs}
-            altText="Portfolio Using FramerMotion"
-            title="Portfolio - NEXT JS"
-            description="Portfolio Using animation, FramerMotion and NEXT JS."
+            description="A modern laptop marketplace web application built with Next.js that allows users to explore, filter, and compare premium laptops with a clean UI and fast performance."
             onMouseEnter={() => handleMouseEnter('View')}
             onMouseLeave={handleMouseLeave}
           />
@@ -103,11 +105,29 @@ const ProjectDetailsComp = () => {
             onMouseLeave={handleMouseLeave}
           />
           <ProjectCard
-            href="http://app.edge21.co/"
+            href="https://edge21.co/"
             imageSrc={edge21}
             altText="Trending Bitcoin News & Insights"
             title="Trending Bitcoin News & Insights"
             description="Trending Bitcoin News Feed & Insights system for better user experience and updated news."
+            onMouseEnter={() => handleMouseEnter('View')}
+            onMouseLeave={handleMouseLeave}
+          />
+          <ProjectCard
+            href="https://next-js-portfolio-henna.vercel.app/"
+            imageSrc={nextjs}
+            altText="Portfolio Using FramerMotion"
+            title="Portfolio - NEXT JS"
+            description="Portfolio Built with Next.js featuring smooth animations using Framer Motion, responsive design for an engaging user experience."
+            onMouseEnter={() => handleMouseEnter('View')}
+            onMouseLeave={handleMouseLeave}
+          />
+          <ProjectCard
+            href="https://next-js-sside.vercel.app/"
+            imageSrc={Anime}
+            altText="Next.js Animated Portfolio"
+            title="Animated Portfolio - Next.js"
+            description="Built with Next.js featuring smooth animations using Framer Motion, responsive design, and interactive UI components for an engaging user experience."
             onMouseEnter={() => handleMouseEnter('View')}
             onMouseLeave={handleMouseLeave}
           />

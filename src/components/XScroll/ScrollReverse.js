@@ -1,34 +1,40 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 const ScrollReverse = () => {
-    useEffect(() => {
-        const textElements = gsap.utils.toArray(".scrolling-text-reverse");
+  const wrapperRef = useRef(null);
 
-        // Create a scrolling animation that wraps around for seamless continuous scroll
-        gsap.to(textElements, {
-            xPercent: -100,
-            ease: 'none',
-            duration: 8,
-            repeat: -1,
-            modifiers: {
-                xPercent: gsap.utils.wrap(-100, 0)
-            }
-        });
-    }, []);
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
 
-    return (
-        <section className="w-full overflow-hidden">
-            <div className="flex h-32 items-center justify-center bg-[#673ab7]">
-                <div className="flex space-x-4"> {/* Add a wrapper to make it continuous */}
-                    <h1 className="scrolling-text-reverse text-3xl sm:text-md px-4 text-white">• Some of my best works •</h1>
-                    <h1 className="scrolling-text-reverse text-3xl sm:text-md px-4 text-white">• Some of my best works •</h1>
-                    <h1 className="scrolling-text-reverse text-3xl sm:text-md px-4 text-white">• Some of my best works •</h1>
-                    <h1 className="scrolling-text-reverse text-3xl sm:text-md px-4 text-white">• Some of my best works •</h1>
-                </div>
-            </div>
-        </section>
-    );
+    gsap.to(wrapper, {
+      xPercent: -30,
+      duration: 10,
+      ease: "none",
+      repeat: -1,
+    });
+  }, []);
+
+  const text = "Some of my best works";
+
+  return (
+    <section className="w-full overflow-hidden">
+      <div className="flex h-32 items-center bg-[#673ab7]">
+        <div
+          ref={wrapperRef}
+          className="flex whitespace-nowrap gap-x-16 text-white text-3xl"
+        >
+          {[...Array(20)].map((_, i) => (
+            <span key={i}>{text}</span>
+          ))}
+
+          {[...Array(20)].map((_, i) => (
+            <span key={`dup-${i}`}>{text}</span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default ScrollReverse;
